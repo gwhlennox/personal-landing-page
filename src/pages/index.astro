@@ -1,58 +1,58 @@
 ---
-const brands = [
+const experience = [
   {
-    name: 'Accenture',
-    role: 'Chief of Staff & Lead Data Consultant',
-    period: 'Jun 2021 – Nov 2023',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.',
-  },
-  {
-    name: 'Kingfisher PLC',
-    role: 'Enterprise Client',
-    period: 'Jun 2021 – Nov 2023',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.',
-  },
-  {
-    name: 'Value Retail',
-    role: 'Enterprise Client',
-    period: 'Jun 2018 – Jun 2021',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.',
-  },
-  {
-    name: 'NTT Data',
-    role: 'Solution Team Leader & Product Owner',
-    period: 'Jun 2018 – Jun 2021',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.',
-  },
-  {
-    name: "McDonald's",
-    role: 'Add your role',
-    period: 'YYYY – YYYY',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.',
-  },
-  {
-    name: 'SideShift.ai',
+    company: 'SideShift.ai',
     role: 'Strategic Partnerships & Ecosystem Lead',
-    period: 'Apr 2025 – May 2026',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.',
+    period: '2025 – 2026',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
   },
   {
-    name: 'Olapic',
+    company: 'Accenture',
+    role: 'Chief of Staff & Lead Data Consultant',
+    period: '2021 – 2023',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
+  },
+  {
+    company: 'Kingfisher PLC',
+    role: 'Enterprise Client',
+    period: '2021 – 2023',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
+  },
+  {
+    company: 'NTT Data',
+    role: 'Solution Team Leader & Product Owner',
+    period: '2018 – 2021',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
+  },
+  {
+    company: 'Value Retail',
+    role: 'Enterprise Client',
+    period: '2018 – 2021',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
+  },
+  {
+    company: "McDonald's",
     role: 'Add your role',
     period: 'YYYY – YYYY',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
   },
   {
-    name: 'Peerius',
+    company: 'Olapic',
+    role: 'Add your role',
+    period: 'YYYY – YYYY',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
+  },
+  {
+    company: 'Peerius',
     role: 'Project Manager',
-    period: 'Apr 2015 – Jun 2018',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.',
+    period: '2015 – 2018',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
   },
   {
-    name: 'Incopro',
+    company: 'Incopro',
     role: 'Add your role',
     period: 'YYYY – YYYY',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
   },
 ];
 ---
@@ -67,198 +67,118 @@ const brands = [
     <link rel="icon" type="image/jpeg" href="/headshot.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
   </head>
 
-  <body class="bg-white text-neutral-900 font-sans antialiased">
+  <body class="bg-white text-neutral-800 font-sans antialiased">
+    <div class="max-w-xl mx-auto px-6 py-16">
 
-    <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b border-neutral-100">
-      <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#" class="text-sm font-medium tracking-[0.2em] uppercase text-neutral-900">GL</a>
-        <div class="hidden md:flex items-center gap-8 text-sm text-neutral-400">
-          <a href="#portfolio" class="hover:text-neutral-900 transition-colors duration-200">Portfolio</a>
-          <a href="#media" class="hover:text-neutral-900 transition-colors duration-200">Media</a>
-          <a href="#articles" class="hover:text-neutral-900 transition-colors duration-200">Articles</a>
-          <a href="#about" class="hover:text-neutral-900 transition-colors duration-200">About</a>
-          <a href="#contact" class="hover:text-neutral-900 transition-colors duration-200">Contact</a>
+      <!-- Header -->
+      <header class="mb-16">
+        <div class="flex items-center gap-4 mb-6">
+          <img
+            src="/headshot.jpg"
+            alt="George Lennox"
+            class="w-12 h-12 rounded-full object-cover object-top grayscale"
+          />
+          <div>
+            <h1 class="text-base font-medium text-neutral-900">George Lennox</h1>
+            <p class="text-sm text-neutral-400">Bangkok, Thailand · Open to remote</p>
+          </div>
         </div>
-        <div class="md:hidden text-xs text-neutral-400 tracking-widest uppercase">Menu</div>
-      </div>
-    </nav>
-
-    <!-- Hero -->
-    <section class="pt-40 pb-28 px-6">
-      <div class="max-w-5xl mx-auto">
-        <p class="text-xs tracking-[0.25em] uppercase text-neutral-400 mb-8">
-          Customer Success &amp; Chief of Staff
+        <p class="text-sm text-neutral-500 leading-relaxed mb-6">
+          Customer Success &amp; Chief of Staff — Fintech, Crypto, and Enterprise SaaS.
+          Bridging strategy and execution at FTSE 100 companies.
         </p>
-        <h1 class="text-6xl md:text-8xl font-light tracking-tight text-neutral-900 leading-[0.95] mb-10">
-          George<br />Lennox
-        </h1>
-        <p class="text-base text-neutral-500 max-w-xl leading-relaxed">
-          Fintech, Crypto and Enterprise SaaS — bridging strategy and execution at FTSE 100 companies.
-        </p>
-      </div>
-    </section>
+        <nav class="flex flex-wrap gap-4 text-sm text-neutral-400">
+          <a href="#portfolio" class="hover:text-neutral-900 transition-colors">Portfolio</a>
+          <a href="#media" class="hover:text-neutral-900 transition-colors">Media</a>
+          <a href="#articles" class="hover:text-neutral-900 transition-colors">Articles</a>
+          <a href="#about" class="hover:text-neutral-900 transition-colors">About</a>
+          <a href="mailto:gwhlennox@gmail.com" class="hover:text-neutral-900 transition-colors">Email</a>
+          <a href="https://www.linkedin.com/in/george--lennox/" target="_blank" rel="noopener noreferrer" class="hover:text-neutral-900 transition-colors">LinkedIn ↗</a>
+        </nav>
+      </header>
 
-    <div class="max-w-5xl mx-auto px-6">
-      <hr class="border-neutral-100" />
-    </div>
-
-    <!-- Portfolio -->
-    <section id="portfolio" class="py-24 px-6">
-      <div class="max-w-5xl mx-auto">
-        <h2 class="text-xs tracking-[0.25em] uppercase text-neutral-400 mb-14">Portfolio</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-neutral-100">
-          {brands.map((brand) => (
-            <div class="bg-white p-8 hover:bg-neutral-50 transition-colors duration-200">
-              <p class="text-xs text-neutral-300 mb-4 tracking-wider">{brand.period}</p>
-              <h3 class="text-base font-medium text-neutral-900 mb-1">{brand.name}</h3>
-              <p class="text-xs text-neutral-400 mb-4 uppercase tracking-wider">{brand.role}</p>
-              <p class="text-sm text-neutral-400 leading-relaxed">{brand.description}</p>
+      <!-- Portfolio -->
+      <section id="portfolio" class="mb-16">
+        <h2 class="text-xs uppercase tracking-widest text-neutral-300 mb-8">Portfolio</h2>
+        <div class="space-y-8">
+          {experience.map((item) => (
+            <div>
+              <div class="flex items-baseline justify-between gap-4 mb-1">
+                <span class="text-sm font-medium text-neutral-900">{item.company}</span>
+                <span class="text-xs text-neutral-300 shrink-0 tabular-nums">{item.period}</span>
+              </div>
+              <p class="text-xs text-neutral-400 mb-2">{item.role}</p>
+              <p class="text-sm text-neutral-400 leading-relaxed">{item.description}</p>
             </div>
           ))}
         </div>
-      </div>
-    </section>
+      </section>
 
-    <div class="max-w-5xl mx-auto px-6">
-      <hr class="border-neutral-100" />
-    </div>
-
-    <!-- Media -->
-    <section id="media" class="py-24 px-6">
-      <div class="max-w-5xl mx-auto">
-        <h2 class="text-xs tracking-[0.25em] uppercase text-neutral-400 mb-14">Media</h2>
-        <p class="text-sm text-neutral-500 leading-relaxed mb-6 max-w-lg">
+      <!-- Media -->
+      <section id="media" class="mb-16">
+        <h2 class="text-xs uppercase tracking-widest text-neutral-300 mb-8">Media</h2>
+        <p class="text-sm text-neutral-400 leading-relaxed mb-4">
           Interviews, podcasts, and features across fintech, Web3, and enterprise strategy.
         </p>
         <a
           href="https://linktr.ee/georgelennox"
           target="_blank"
           rel="noopener noreferrer"
-          class="inline-flex items-center gap-2 text-sm text-neutral-900 border border-neutral-200 px-5 py-3 hover:bg-neutral-50 transition-colors duration-200"
+          class="text-sm text-neutral-900 hover:text-neutral-400 transition-colors"
         >
-          View all media ↗
+          View all ↗
         </a>
-      </div>
-    </section>
+      </section>
 
-    <div class="max-w-5xl mx-auto px-6">
-      <hr class="border-neutral-100" />
-    </div>
-
-    <!-- Articles -->
-    <section id="articles" class="py-24 px-6">
-      <div class="max-w-5xl mx-auto">
-        <h2 class="text-xs tracking-[0.25em] uppercase text-neutral-400 mb-14">Articles</h2>
-        <p class="text-sm text-neutral-500 leading-relaxed mb-6 max-w-lg">
+      <!-- Articles -->
+      <section id="articles" class="mb-16">
+        <h2 class="text-xs uppercase tracking-widest text-neutral-300 mb-8">Articles</h2>
+        <p class="text-sm text-neutral-400 leading-relaxed mb-4">
           Writing on customer success, chief of staff, Web3, and operating at the intersection of strategy and delivery.
         </p>
         <a
           href="https://linktr.ee/georgelennox"
           target="_blank"
           rel="noopener noreferrer"
-          class="inline-flex items-center gap-2 text-sm text-neutral-900 border border-neutral-200 px-5 py-3 hover:bg-neutral-50 transition-colors duration-200"
+          class="text-sm text-neutral-900 hover:text-neutral-400 transition-colors"
         >
-          View all articles ↗
+          View all ↗
         </a>
-      </div>
-    </section>
+      </section>
 
-    <div class="max-w-5xl mx-auto px-6">
-      <hr class="border-neutral-100" />
+      <!-- About -->
+      <section id="about" class="mb-16">
+        <h2 class="text-xs uppercase tracking-widest text-neutral-300 mb-8">About</h2>
+        <div class="space-y-4 text-sm text-neutral-500 leading-relaxed">
+          <p>
+            George has over 10 years of experience leading customer relationships, strategic initiatives,
+            and transformation programmes across fintech, Web3, and enterprise technology.
+          </p>
+          <p>
+            Most recently, he led strategic partnerships and ecosystem growth at SideShift.ai. Prior to
+            that, he served as Chief of Staff to programme leadership at Accenture on a major FTSE 100
+            transformation programme for Kingfisher Group, acting as the bridge between executive
+            stakeholders and delivery teams. His background combines customer success, partnerships,
+            programme leadership, and enterprise consulting, with a strong track record of growing
+            accounts, delivering complex initiatives, and building trusted stakeholder relationships.
+          </p>
+          <p>Based in Thailand, he is open to remote and hybrid opportunities.</p>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="pt-8 border-t border-neutral-100">
+        <div class="flex flex-wrap gap-4 text-xs text-neutral-300">
+          <a href="mailto:gwhlennox@gmail.com" class="hover:text-neutral-600 transition-colors">gwhlennox@gmail.com</a>
+          <a href="https://www.linkedin.com/in/george--lennox/" target="_blank" rel="noopener noreferrer" class="hover:text-neutral-600 transition-colors">LinkedIn ↗</a>
+          <a href="https://linktr.ee/georgelennox" target="_blank" rel="noopener noreferrer" class="hover:text-neutral-600 transition-colors">Linktree ↗</a>
+          <span class="ml-auto">© 2026 George Lennox</span>
+        </div>
+      </footer>
+
     </div>
-
-    <!-- About -->
-    <section id="about" class="py-24 px-6">
-      <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-20">
-        <div>
-          <h2 class="text-xs tracking-[0.25em] uppercase text-neutral-400 mb-14">About</h2>
-          <!-- Replace /headshot.jpg with your actual photo filename once added to /public -->
-          <div class="w-28 h-28 rounded-full bg-neutral-100 mb-8 overflow-hidden">
-            <img
-              src="/headshot.jpg"
-              alt="George Lennox"
-              class="w-full h-full object-cover object-top grayscale"
-            />
-          </div>
-          <div class="space-y-4 text-sm text-neutral-500 leading-relaxed">
-            <p>
-              George has over 10 years of experience leading customer relationships, strategic initiatives,
-              and transformation programmes across fintech, Web3, and enterprise technology.
-            </p>
-            <p>
-              Most recently, he led strategic partnerships and ecosystem growth at SideShift.ai. Prior to
-              that, he served as Chief of Staff to programme leadership at Accenture on a major FTSE 100
-              transformation programme for Kingfisher Group, acting as the bridge between executive
-              stakeholders and delivery teams. His background combines customer success, partnerships,
-              programme leadership, and enterprise consulting, with a strong track record of growing
-              accounts, delivering complex initiatives, and building trusted stakeholder relationships.
-            </p>
-            <p>Based in Thailand, he is open to remote and hybrid opportunities.</p>
-          </div>
-        </div>
-        <div>
-          <h2 class="text-xs tracking-[0.25em] uppercase text-neutral-400 mb-14">Experience</h2>
-          <div class="space-y-3">
-            {brands.map((brand) => (
-              <div class="flex items-baseline justify-between text-sm border-b border-neutral-50 pb-3">
-                <span class="text-neutral-700">{brand.name}</span>
-                <span class="text-neutral-300 text-xs tabular-nums">{brand.period}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="max-w-5xl mx-auto px-6">
-      <hr class="border-neutral-100" />
-    </div>
-
-    <!-- Contact -->
-    <section id="contact" class="py-24 px-6">
-      <div class="max-w-5xl mx-auto">
-        <h2 class="text-xs tracking-[0.25em] uppercase text-neutral-400 mb-14">Contact</h2>
-        <div class="flex flex-col sm:flex-row gap-10">
-          <a
-            href="mailto:gwhlennox@gmail.com"
-            class="text-neutral-900 text-sm hover:text-neutral-400 transition-colors duration-200"
-          >
-            gwhlennox@gmail.com
-          </a>
-          <a
-            href="https://www.linkedin.com/in/george--lennox/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-neutral-900 text-sm hover:text-neutral-400 transition-colors duration-200"
-          >
-            LinkedIn ↗
-          </a>
-          <a
-            href="https://linktr.ee/georgelennox"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-neutral-900 text-sm hover:text-neutral-400 transition-colors duration-200"
-          >
-            Linktree ↗
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="border-t border-neutral-100 py-8 px-6">
-      <div class="max-w-5xl mx-auto flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 text-xs text-neutral-300">
-        <span>© 2026 George Lennox</span>
-        <span>Customer Success &amp; Chief of Staff</span>
-      </div>
-    </footer>
-
   </body>
 </html>

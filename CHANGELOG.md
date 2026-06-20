@@ -7,6 +7,20 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+### Added
+- Nav logo replaced with circular headshot avatar (greyscale, colour on hover)
+- Hero portrait photo to the right of name
+- Contact pills in hero: Email, WhatsApp, Telegram (with SVG icons)
+- Nested projects within portfolio cards: SideShift.ai → Akindo Buildathon, Pay API Growth; Accenture → Kingfisher PLC, Modern Data Stack; NTT Data → McDonald's, Value Retail, Howdens
+
+### Changed
+- Nav order updated to: Portfolio, Articles, Media, About, Contact
+- Kingfisher PLC and McDonald's/Value Retail removed as standalone top-level cards (now nested under Accenture and NTT Data respectively)
+- Headshot removed from About section (now in hero)
+
+### Todo
+- Update Telegram username in `src/pages/index.astro` (currently placeholder)
+
 ---
 
 ## [2026-06-20]

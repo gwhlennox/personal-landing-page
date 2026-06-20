@@ -67,11 +67,22 @@ img {
 }
 
 .nav-logo {
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: #171717;
+  display: flex;
+  align-items: center;
+}
+
+.nav-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  filter: grayscale(1);
+  transition: filter 0.2s;
+}
+
+.nav-logo:hover .nav-avatar {
+  filter: grayscale(0);
 }
 
 .nav-links {
@@ -96,6 +107,24 @@ img {
 .hero {
   padding-top: 10rem;
   padding-bottom: 6rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.hero-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.hero-photo {
+  width: 200px;
+  height: 267px;
+  object-fit: cover;
+  object-position: top center;
+  filter: grayscale(1);
+  flex-shrink: 0;
 }
 
 .hero-label {
@@ -120,6 +149,34 @@ img {
   color: #737373;
   max-width: 28rem;
   line-height: 1.75;
+  margin-bottom: 2rem;
+}
+
+/* ============================================================
+   Contact pills (hero)
+   ============================================================ */
+
+.contact-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+}
+
+.contact-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.875rem;
+  border: 1px solid #e5e5e5;
+  font-size: 0.8rem;
+  color: #525252;
+  transition: border-color 0.2s, color 0.2s;
+  white-space: nowrap;
+}
+
+.contact-pill:hover {
+  border-color: #a3a3a3;
+  color: #171717;
 }
 
 /* ============================================================
@@ -196,6 +253,46 @@ img {
   line-height: 1.7;
 }
 
+.card-projects {
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #f5f5f5;
+}
+
+.card-projects-label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #d4d4d4;
+  margin-bottom: 0.625rem;
+}
+
+.card-projects-list {
+  list-style: none;
+}
+
+.card-project-item {
+  font-size: 0.8rem;
+  color: #737373;
+  padding: 0.3rem 0;
+  border-bottom: 1px solid #fafafa;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card-project-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.card-project-item::before {
+  content: '→';
+  color: #d4d4d4;
+  font-size: 0.7rem;
+  flex-shrink: 0;
+}
+
 /* ============================================================
    Sidebar sections (Media, Articles, About, Contact)
    ============================================================ */
@@ -230,16 +327,6 @@ img {
 /* ============================================================
    About
    ============================================================ */
-
-.headshot {
-  width: 5.5rem;
-  height: 5.5rem;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: top;
-  filter: grayscale(1);
-  margin-bottom: 0;
-}
 
 .about-text p {
   font-size: 0.875rem;
@@ -298,6 +385,16 @@ img {
 @media (max-width: 768px) {
   .nav-links {
     display: none;
+  }
+
+  .hero {
+    flex-direction: column-reverse;
+    gap: 2rem;
+  }
+
+  .hero-photo {
+    width: 120px;
+    height: 160px;
   }
 
   .portfolio-grid {

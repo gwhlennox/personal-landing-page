@@ -1,0 +1,218 @@
+---
+const brands = [
+  {
+    name: 'Accenture',
+    role: 'Add your role',
+    period: 'YYYY – YYYY',
+    description: 'Add a brief description of your work here.',
+  },
+  {
+    name: 'Kingfisher PLC',
+    role: 'Add your role',
+    period: 'YYYY – YYYY',
+    description: 'Add a brief description of your work here.',
+  },
+  {
+    name: 'Value Retail',
+    role: 'Add your role',
+    period: 'YYYY – YYYY',
+    description: 'Add a brief description of your work here.',
+  },
+  {
+    name: 'NTT Data',
+    role: 'Add your role',
+    period: 'YYYY – YYYY',
+    description: 'Add a brief description of your work here.',
+  },
+  {
+    name: "McDonald's",
+    role: 'Add your role',
+    period: 'YYYY – YYYY',
+    description: 'Add a brief description of your work here.',
+  },
+  {
+    name: 'SideShift.ai',
+    role: 'Add your role',
+    period: 'YYYY – YYYY',
+    description: 'Add a brief description of your work here.',
+  },
+  {
+    name: 'Olapic',
+    role: 'Add your role',
+    period: 'YYYY – YYYY',
+    description: 'Add a brief description of your work here.',
+  },
+  {
+    name: 'Peerius',
+    role: 'Add your role',
+    period: 'YYYY – YYYY',
+    description: 'Add a brief description of your work here.',
+  },
+  {
+    name: 'Incopro',
+    role: 'Add your role',
+    period: 'YYYY – YYYY',
+    description: 'Add a brief description of your work here.',
+  },
+];
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>George Lennox</title>
+    <meta name="description" content="George Lennox — Chief of Staff & Customer Success Leader" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="bg-white text-neutral-900 font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b border-neutral-100">
+      <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+        <a href="#" class="text-sm font-medium tracking-[0.2em] uppercase text-neutral-900">GL</a>
+        <div class="hidden md:flex items-center gap-8 text-sm text-neutral-400">
+          <a href="#portfolio" class="hover:text-neutral-900 transition-colors duration-200">Portfolio</a>
+          <a href="#media" class="hover:text-neutral-900 transition-colors duration-200">Media</a>
+          <a href="#articles" class="hover:text-neutral-900 transition-colors duration-200">Articles</a>
+          <a href="#about" class="hover:text-neutral-900 transition-colors duration-200">About</a>
+          <a href="#contact" class="hover:text-neutral-900 transition-colors duration-200">Contact</a>
+        </div>
+        <!-- Mobile menu hint -->
+        <div class="md:hidden text-xs text-neutral-400 tracking-widest uppercase">Menu</div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-40 pb-28 px-6">
+      <div class="max-w-5xl mx-auto">
+        <p class="text-xs tracking-[0.25em] uppercase text-neutral-400 mb-8">
+          Chief of Staff &amp; Customer Success Leader
+        </p>
+        <h1 class="text-6xl md:text-8xl font-light tracking-tight text-neutral-900 leading-[0.95] mb-10">
+          George<br />Lennox
+        </h1>
+        <p class="text-base text-neutral-500 max-w-lg leading-relaxed">
+          Add a short bio or positioning statement here — one or two sentences that capture what you do and who you do it for.
+        </p>
+      </div>
+    </section>
+
+    <div class="max-w-5xl mx-auto px-6">
+      <hr class="border-neutral-100" />
+    </div>
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="py-24 px-6">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-xs tracking-[0.25em] uppercase text-neutral-400 mb-14">Portfolio</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-neutral-100">
+          {brands.map((brand) => (
+            <div class="bg-white p-8 group hover:bg-neutral-50 transition-colors duration-200">
+              <p class="text-xs text-neutral-300 mb-4 tracking-wider">{brand.period}</p>
+              <h3 class="text-base font-medium text-neutral-900 mb-1">{brand.name}</h3>
+              <p class="text-xs text-neutral-400 mb-4 uppercase tracking-wider">{brand.role}</p>
+              <p class="text-sm text-neutral-400 leading-relaxed">{brand.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <div class="max-w-5xl mx-auto px-6">
+      <hr class="border-neutral-100" />
+    </div>
+
+    <!-- Media -->
+    <section id="media" class="py-24 px-6">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-xs tracking-[0.25em] uppercase text-neutral-400 mb-14">Media</h2>
+        <p class="text-sm text-neutral-300 italic">Media appearances, interviews, and features — coming soon.</p>
+      </div>
+    </section>
+
+    <div class="max-w-5xl mx-auto px-6">
+      <hr class="border-neutral-100" />
+    </div>
+
+    <!-- Articles -->
+    <section id="articles" class="py-24 px-6">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-xs tracking-[0.25em] uppercase text-neutral-400 mb-14">Articles</h2>
+        <p class="text-sm text-neutral-300 italic">Articles and writing — coming soon.</p>
+      </div>
+    </section>
+
+    <div class="max-w-5xl mx-auto px-6">
+      <hr class="border-neutral-100" />
+    </div>
+
+    <!-- About -->
+    <section id="about" class="py-24 px-6">
+      <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-20">
+        <div>
+          <h2 class="text-xs tracking-[0.25em] uppercase text-neutral-400 mb-14">About</h2>
+          <div class="space-y-4 text-sm text-neutral-500 leading-relaxed">
+            <p>Add your bio here. A short, honest paragraph about who you are, what you do, and what you care about.</p>
+            <p>A second paragraph — professional philosophy, a personal note, or what drives you.</p>
+          </div>
+        </div>
+        <div>
+          <h2 class="text-xs tracking-[0.25em] uppercase text-neutral-400 mb-14">Experience</h2>
+          <div class="space-y-3">
+            {brands.map((brand) => (
+              <div class="flex items-baseline justify-between text-sm border-b border-neutral-50 pb-3">
+                <span class="text-neutral-700">{brand.name}</span>
+                <span class="text-neutral-300 text-xs tabular-nums">{brand.period}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="max-w-5xl mx-auto px-6">
+      <hr class="border-neutral-100" />
+    </div>
+
+    <!-- Contact -->
+    <section id="contact" class="py-24 px-6">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-xs tracking-[0.25em] uppercase text-neutral-400 mb-14">Contact</h2>
+        <div class="flex flex-col sm:flex-row gap-10">
+          <a
+            href="mailto:gwhlennox@gmail.com"
+            class="text-neutral-900 text-sm hover:text-neutral-400 transition-colors duration-200"
+          >
+            gwhlennox@gmail.com
+          </a>
+          <a
+            href="https://linkedin.com/in/georgelennox"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-neutral-900 text-sm hover:text-neutral-400 transition-colors duration-200"
+          >
+            LinkedIn ↗
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-neutral-100 py-8 px-6">
+      <div class="max-w-5xl mx-auto flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 text-xs text-neutral-300">
+        <span>© 2026 George Lennox</span>
+        <span>Chief of Staff &amp; Customer Success Leader</span>
+      </div>
+    </footer>
+
+  </body>
+</html>

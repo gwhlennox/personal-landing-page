@@ -8,18 +8,21 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## [Unreleased]
 
 ### Added
-- Nav logo replaced with circular headshot avatar (greyscale, colour on hover)
-- Hero portrait photo to the right of name
-- Contact pills in hero: Email, WhatsApp, Telegram (with SVG icons)
-- Nested projects within portfolio cards: SideShift.ai → Akindo Buildathon, Pay API Growth; Accenture → Kingfisher PLC, Modern Data Stack; NTT Data → McDonald's, Value Retail, Howdens
+- Individual company pages via Astro dynamic routing (`/experience/[slug]`)
+- `src/data/experience.js` — single source of truth for all experience data
+- Company pages include: summary, headcount, team size, website link, case studies
+- "View more →" arrow link on each experience card linking to its page
+- "Read more →" link in hero scrolling to About section
+- "Case Studies" label replacing "Projects" on cards and company pages
 
 ### Changed
-- Nav order updated to: Portfolio, Articles, Media, About, Contact
-- Kingfisher PLC and McDonald's/Value Retail removed as standalone top-level cards (now nested under Accenture and NTT Data respectively)
-- Headshot removed from About section (now in hero)
-
-### Todo
-- Update Telegram username in `src/pages/index.astro` (currently placeholder)
+- Hero title: "Customer Success & Chief of Staff" → "Strategic Partnerships & Operations Leader"
+- Hero subheader updated to "10+ years building partnerships..."
+- Section label: "Portfolio" → "Experience" (nav and heading)
+- Nav anchor updated: `#portfolio` → `#experience`
+- Olapic role: → "Project Manager"
+- Incopro role: → "Database Manager"
+- Location updated to "London, UK" (footer and About section)
 
 ---
 

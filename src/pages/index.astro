@@ -1,57 +1,6 @@
 ---
 import '../styles/global.css';
-
-const experience = [
-  {
-    company: 'SideShift.ai',
-    role: 'Strategic Partnerships & Ecosystem Lead',
-    period: '2025 – 2026',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    projects: [
-      { name: 'Akindo Buildathon' },
-      { name: 'Pay API Growth' },
-    ],
-  },
-  {
-    company: 'Accenture',
-    role: 'Chief of Staff & Lead Data Consultant',
-    period: '2021 – 2023',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    projects: [
-      { name: 'Kingfisher PLC' },
-      { name: 'Modern Data Stack' },
-    ],
-  },
-  {
-    company: 'NTT Data',
-    role: 'Solution Team Leader & Product Owner',
-    period: '2018 – 2021',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    projects: [
-      { name: "McDonald's" },
-      { name: 'Value Retail' },
-      { name: 'Howdens' },
-    ],
-  },
-  {
-    company: 'Peerius',
-    role: 'Project Manager',
-    period: '2015 – 2018',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-  },
-  {
-    company: 'Olapic',
-    role: 'Add your role',
-    period: 'YYYY – YYYY',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-  },
-  {
-    company: 'Incopro',
-    role: 'Add your role',
-    period: 'YYYY – YYYY',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-  },
-];
+import { experience } from '../data/experience.js';
 ---
 
 <!DOCTYPE html>
@@ -60,7 +9,7 @@ const experience = [
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>George Lennox</title>
-    <meta name="description" content="George Lennox — Customer Success & Chief of Staff | Fintech, Crypto and Enterprise SaaS" />
+    <meta name="description" content="George Lennox — Strategic Partnerships & Operations Leader | Fintech, Crypto and Enterprise SaaS" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -75,7 +24,7 @@ const experience = [
           <img src="/headshot.jpg" alt="George Lennox" class="nav-avatar" width="30" height="30" />
         </a>
         <div class="nav-links">
-          <a href="#portfolio">Portfolio</a>
+          <a href="#experience">Experience</a>
           <a href="#articles">Articles</a>
           <a href="#media">Media</a>
           <a href="#about">About</a>
@@ -89,12 +38,13 @@ const experience = [
       <!-- Hero -->
       <section class="hero">
         <div class="hero-content">
-          <p class="hero-label">Customer Success &amp; Chief of Staff</p>
+          <p class="hero-label">Strategic Partnerships &amp; Operations Leader</p>
           <h1 class="hero-name">George<br />Lennox</h1>
           <p class="hero-bio">
-            Fintech, Crypto and Enterprise SaaS. Bridging strategy and execution
-            at FTSE 100 companies. Based in Bangkok — open to remote &amp; hybrid.
+            10+ years building partnerships, scaling operations, and driving
+            transformation across enterprise SaaS, Web3, and fintech.
           </p>
+          <a href="#about" class="read-more">Read more →</a>
           <div class="contact-pills">
             <a href="mailto:gwhlennox@gmail.com" class="contact-pill" aria-label="Email">
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -127,9 +77,9 @@ const experience = [
         />
       </section>
 
-      <!-- Portfolio -->
-      <section id="portfolio" class="section">
-        <h2 class="section-label">Portfolio</h2>
+      <!-- Experience -->
+      <section id="experience" class="section">
+        <h2 class="section-label">Experience</h2>
         <div class="portfolio-grid">
           {experience.map((item) => (
             <article class="card">
@@ -139,16 +89,21 @@ const experience = [
               </div>
               <p class="card-role">{item.role}</p>
               <p class="card-desc">{item.description}</p>
-              {item.projects && item.projects.length > 0 && (
+              {item.caseStudies && item.caseStudies.length > 0 && (
                 <div class="card-projects">
-                  <p class="card-projects-label">Projects</p>
+                  <p class="card-projects-label">Case Studies</p>
                   <ul class="card-projects-list">
-                    {item.projects.map((project) => (
-                      <li class="card-project-item">{project.name}</li>
+                    {item.caseStudies.map((cs) => (
+                      <li class="card-project-item">{cs.name}</li>
                     ))}
                   </ul>
                 </div>
               )}
+              <div class="card-footer">
+                <a href={`/experience/${item.slug}`} class="card-arrow" aria-label={`View ${item.company} in detail`}>
+                  View more →
+                </a>
+              </div>
             </article>
           ))}
         </div>
@@ -225,7 +180,7 @@ const experience = [
               growing accounts, delivering complex initiatives, and building trusted
               stakeholder relationships.
             </p>
-            <p>Based in Thailand. Open to remote and hybrid opportunities.</p>
+            <p>Based in London, UK. Open to remote and hybrid opportunities.</p>
           </div>
         </div>
       </section>
@@ -252,7 +207,7 @@ const experience = [
     <footer class="footer">
       <div class="footer-inner">
         <span>© 2026 George Lennox</span>
-        <span>Bangkok, Thailand</span>
+        <span>London, UK</span>
       </div>
     </footer>
 

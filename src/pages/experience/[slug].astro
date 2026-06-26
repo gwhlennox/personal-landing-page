@@ -1,0 +1,109 @@
+---
+import '../../styles/global.css';
+import { experience } from '../../data/experience.js';
+
+export function getStaticPaths() {
+  return experience.map((item) => ({
+    params: { slug: item.slug },
+    props: { item },
+  }));
+}
+
+const { item } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{item.company} — George Lennox</title>
+    <meta name="description" content={`George Lennox at ${item.company} — ${item.role}`} />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  </head>
+
+  <body>
+
+    <nav class="nav">
+      <div class="nav-inner">
+        <a href="/" class="nav-logo" aria-label="Back to home">
+          <img src="/headshot.jpg" alt="George Lennox" class="nav-avatar" width="30" height="30" />
+        </a>
+        <div class="nav-links">
+          <a href="/#experience">Experience</a>
+          <a href="/#articles">Articles</a>
+          <a href="/#media">Media</a>
+          <a href="/#about">About</a>
+          <a href="/#contact">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container">
+      <div class="company-page">
+
+        <a href="/#experience" class="back-link">← Back to experience</a>
+
+        <header class="company-header">
+          <div>
+            <p class="hero-label">{item.role}</p>
+            <h1 class="company-name">{item.company}</h1>
+            <p class="company-period">{item.period}</p>
+          </div>
+          <a
+            href={item.website}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="company-website-link"
+          >
+            Visit website ↗
+          </a>
+        </header>
+
+        <div class="company-meta">
+          <div class="company-meta-item">
+            <span class="meta-label">Headcount</span>
+            <span class="meta-value">{item.headcount}</span>
+          </div>
+          <div class="company-meta-item">
+            <span class="meta-label">Team</span>
+            <span class="meta-value">{item.teamSize}</span>
+          </div>
+        </div>
+
+        <section class="section">
+          <h2 class="section-label">About {item.company}</h2>
+          <p class="company-body">{item.companySummary}</p>
+        </section>
+
+        <section class="section">
+          <h2 class="section-label">Role Overview</h2>
+          <p class="company-body">{item.description}</p>
+        </section>
+
+        {item.caseStudies && item.caseStudies.length > 0 && (
+          <section class="section">
+            <h2 class="section-label">Case Studies</h2>
+            <ul class="case-studies-list">
+              {item.caseStudies.map((cs) => (
+                <li class="case-study-item">{cs.name}</li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <a href="/" class="footer-home">← George Lennox</a>
+        <span>© 2026</span>
+      </div>
+    </footer>
+
+  </body>
+</html>

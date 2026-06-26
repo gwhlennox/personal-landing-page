@@ -8,7 +8,7 @@ export const experience = [
     companySummary: 'Non-custodial crypto exchange and payments infrastructure platform operating in Web3. Bootstrapped, fully remote startup of ~18 employees.',
     headcount: '~18 employees',
     teamSize: 'Solo partnerships function',
-    description: 'SideShift.ai is a non-custodial crypto exchange and payments infrastructure platform, operating in Web3 with a startup team of ~18. George led the full partner lifecycle — from research and first contact through to onboarding, integration, and long-term relationship management. He scaled partnerships across 13 countries and 8 blockchain networks, designed and delivered a global hackathon attracting 164 builders with 68 submissions, and generated 24 qualified ecosystem contacts at Solana Accelerate within two weeks of joining.',
+    description: 'SideShift.ai is a non-custodial crypto exchange and payments infrastructure platform, operating in Web3 with a startup team of ~18. I led the full partner lifecycle — from research and first contact through to onboarding, integration, and long-term relationship management. I scaled partnerships across 13 countries and 8 blockchain networks, designed and delivered a global hackathon attracting 164 builders with 68 submissions, and generated 24 qualified ecosystem contacts at Solana Accelerate within two weeks of joining.',
     notablePartners: [
       'Trezor', 'Bitcoin.com', 'Cake Wallet', 'Edge Wallet',
       'Ethereum Foundation', 'Aqua Wallet', 'Solana Foundation', 'BTC Prague',
@@ -27,7 +27,7 @@ export const experience = [
     companySummary: 'Global management consulting and professional services firm with 700,000+ employees. Originally joined via Redkite, a boutique data and analytics consultancy (~150 employees), which was acquired by Accenture.',
     headcount: '700,000+ globally (Redkite: ~150 at time of join)',
     teamSize: 'Led team of 8 business analysts & engineers',
-    description: 'Accenture is one of the world\'s largest management consulting and professional services firms, with 700,000+ employees globally. George served as Chief of Staff to programme leadership on a major multi-year FTSE 100 transformation for Kingfisher Group, leading a team of 8 business analysts and engineers. He delivered over £10M in annual supply chain efficiency savings, built data infrastructure now responsible for 10%+ of B&Q\'s e-commerce sales, and achieved a 50% reduction in client time-to-value.',
+    description: 'Accenture is one of the world\'s largest management consulting and professional services firms, with 700,000+ employees globally. I served as Chief of Staff to programme leadership on a major multi-year FTSE 100 transformation for Kingfisher Group, leading a team of 8 business analysts and engineers. I delivered over £10M in annual supply chain efficiency savings, built data infrastructure now responsible for 10%+ of B&Q\'s e-commerce sales, and achieved a 50% reduction in client time-to-value.',
     caseStudies: [
       { name: 'Kingfisher PLC' },
       { name: 'Modern Data Stack' },
@@ -42,7 +42,7 @@ export const experience = [
     companySummary: 'Global IT services and digital transformation company, subsidiary of NTT Group, with ~190,000 employees worldwide.',
     headcount: '~190,000 employees globally',
     teamSize: 'Led cross-functional delivery teams across 7 concurrent programmes',
-    description: 'NTT Data is a global IT services and digital transformation company with ~190,000 employees, operating across enterprise technology, cloud, and data. George led delivery teams across 7 concurrent digital transformation programmes in luxury retail and fintech, accountable for client outcomes, stakeholder engagement, and delivery governance. Key achievements include keeping Howdens fully operational during COVID, a 10–20% sales uplift for Howdens, and a 34% increase in guest spend at Value Retail through a hands-free shopping platform rolled out across 12 global locations.',
+    description: 'NTT Data is a global IT services and digital transformation company with ~190,000 employees, operating across enterprise technology, cloud, and data. I led delivery teams across 7 concurrent digital transformation programmes in luxury retail and fintech, accountable for client outcomes, stakeholder engagement, and delivery governance. Key achievements include keeping Howdens fully operational during COVID, a 10–20% sales uplift for Howdens, and a 34% increase in guest spend at Value Retail through a hands-free shopping platform rolled out across 12 global locations.',
     caseStudies: [
       { name: "McDonald's" },
       { name: 'Value Retail' },
@@ -58,7 +58,7 @@ export const experience = [
     companySummary: 'UGC marketing and earned content platform at early growth stage (~80 employees), acquired by Monotype in 2018.',
     headcount: '~80 employees',
     teamSize: 'Add team size',
-    description: 'Olapic was a leading UGC marketing and earned content platform at early growth stage (~80 employees), later acquired by Monotype in 2018. George managed client success and project delivery for global retail and consumer brands. He delivered 85+ client projects within budget and to target go-live dates, maintaining a 97% service rating throughout.',
+    description: 'Olapic was a leading UGC marketing and earned content platform at early growth stage (~80 employees), later acquired by Monotype in 2018. I managed client success and project delivery for global retail and consumer brands, delivering 85+ client projects within budget and to target go-live dates, maintaining a 97% service rating throughout.',
   },
   {
     slug: 'peerius',
@@ -69,7 +69,7 @@ export const experience = [
     companySummary: 'Omnichannel personalisation SaaS platform at early growth stage (~40 employees), acquired by Optimizely in 2016.',
     headcount: '~40 employees',
     teamSize: 'Full client delivery ownership across 10+ accounts',
-    description: 'Peerius was an omnichannel personalisation SaaS platform at early growth stage (~40 employees), later acquired by Optimizely. George joined as a Support Analyst and was promoted to Project Manager within 9 months, taking on full client delivery ownership. He contributed to a company-wide NPS turnaround from -42 to +10, delivering 10 client projects while maintaining a 100% service rating.',
+    description: 'Peerius was an omnichannel personalisation SaaS platform at early growth stage (~40 employees), later acquired by Optimizely. I joined as a Support Analyst and was promoted to Project Manager within 9 months, taking on full client delivery ownership. I contributed to a company-wide NPS turnaround from -42 to +10, delivering 10 client projects while maintaining a 100% service rating.',
   },
   {
     slug: 'incopro',
@@ -80,6 +80,6 @@ export const experience = [
     companySummary: 'IP protection and brand monitoring technology company, acquired by Corsearch in 2022.',
     headcount: '~100 employees at time of role',
     teamSize: 'Add team size',
-    description: 'Incopro was an IP protection and brand monitoring technology company, later acquired by Corsearch in 2022. Operating in the legal tech and brand protection space, they served global brands in protecting trademarks and combating online counterfeiting. George worked as a Database Manager supporting brand protection operations for global clients.',
+    description: 'Incopro was an IP protection and brand monitoring technology company, later acquired by Corsearch in 2022. Operating in the legal tech and brand protection space, they served global brands in protecting trademarks and combating online counterfeiting. I worked as a Database Manager supporting brand protection operations for global clients.',
   },
 ];

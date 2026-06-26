@@ -84,6 +84,17 @@ const { item } = Astro.props;
           <p class="company-body">{item.description}</p>
         </section>
 
+        {item.notablePartners && item.notablePartners.length > 0 && (
+          <section class="section">
+            <h2 class="section-label">Notable Partners</h2>
+            <div class="skills-tags">
+              {item.notablePartners.map((partner) => (
+                <span class="skill-tag">{partner}</span>
+              ))}
+            </div>
+          </section>
+        )}
+
         {item.caseStudies && item.caseStudies.length > 0 && (
           <section class="section">
             <h2 class="section-label">Case Studies</h2>

@@ -8,6 +8,9 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## [Unreleased]
 
 ### Added
+- Skills section on homepage — Core Capabilities displayed as tag pills
+- Notable Partners section on SideShift.ai company page (Trezor, Ethereum Foundation, Solana Foundation, etc.)
+- `.skill-tag` and `.skills-tags` CSS classes for reusable tag pill styling
 - Individual company pages via Astro dynamic routing (`/experience/[slug]`)
 - `src/data/experience.js` — single source of truth for all experience data
 - Company pages include: summary, headcount, team size, website link, case studies
@@ -16,6 +19,11 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - "Case Studies" label replacing "Projects" on cards and company pages
 
 ### Changed
+- Experience tile descriptions rewritten from CV — each now covers company context, what George did, and key achievements with metrics
+- Exact dates added for Olapic (Aug 2016 – Jun 2018) and Peerius (Jan 2015 – Aug 2016)
+- SideShift.ai period updated to Apr 2025 – May 2026; headcount corrected to ~18
+- Accenture and NTT Data periods made exact (Jun 2021 – Nov 2023; Jun 2018 – Jun 2021)
+- LinkedIn URL corrected: `george--lennox` → `georgelennox`
 - Hero title: "Customer Success & Chief of Staff" → "Strategic Partnerships & Operations Leader"
 - Hero subheader updated to "10+ years building partnerships..."
 - Section label: "Portfolio" → "Experience" (nav and heading)

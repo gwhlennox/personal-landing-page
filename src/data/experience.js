@@ -8,7 +8,7 @@ export const experience = [
     companySummary: 'Non-custodial cryptocurrency exchange enabling automated digital asset swaps across 8+ blockchain networks. Bootstrapped and fully remote.',
     headcount: '~20 employees',
     teamSize: 'Solo partnerships function',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    description: 'Non-custodial cryptocurrency exchange enabling automated digital asset swaps across 8+ blockchain networks. Operating in the Web3 and decentralised finance space. Bootstrapped and fully remote team of ~20.',
     caseStudies: [
       { name: 'Akindo Buildathon' },
       { name: 'Pay API Growth' },
@@ -23,7 +23,7 @@ export const experience = [
     companySummary: 'Global professional services company specialising in strategy, consulting, technology, and operations. One of the world\'s largest employers.',
     headcount: '700,000+ employees globally',
     teamSize: 'Led team of 8 consultants & analysts',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    description: 'One of the world\'s largest professional services firms, specialising in strategy, consulting, and technology across every major industry. Operating globally with 700,000+ employees. George led a team of 8 consultants and analysts on a major FTSE 100 transformation programme.',
     caseStudies: [
       { name: 'Kingfisher PLC' },
       { name: 'Modern Data Stack' },
@@ -38,7 +38,7 @@ export const experience = [
     companySummary: 'Global IT services and digital transformation company, subsidiary of NTT Group. One of the largest IT services providers in the world.',
     headcount: '200,000+ employees globally',
     teamSize: 'Led cross-functional delivery teams across 7 concurrent programmes',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    description: 'Global IT services and digital transformation company, subsidiary of NTT Group, operating across enterprise technology, cloud, and data services. One of the world\'s largest IT providers with 200,000+ employees. George led cross-functional delivery teams across 7 concurrent client programmes.',
     caseStudies: [
       { name: "McDonald's" },
       { name: 'Value Retail' },
@@ -54,7 +54,7 @@ export const experience = [
     companySummary: 'E-commerce personalisation and product recommendation engine, acquired by Optimizely (formerly Episerver) in 2016. Served major UK and European retailers.',
     headcount: '~60 employees at time of role',
     teamSize: 'Project management across 70+ client accounts',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    description: 'E-commerce personalisation and product recommendation engine serving major UK and European retailers, later acquired by Optimizely in 2016. Operating in the retail SaaS and MarTech space with ~60 employees. George managed project delivery across 70+ client accounts.',
   },
   {
     slug: 'olapic',
@@ -65,7 +65,7 @@ export const experience = [
     companySummary: 'Visual marketing platform specialising in user-generated content (UGC) for global brands. Acquired by Monotype in 2018.',
     headcount: '~150 employees at time of role',
     teamSize: 'Add team size',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    description: 'Visual marketing platform specialising in user-generated content (UGC) for global retail and consumer brands, acquired by Monotype in 2018. Operating in the MarTech and digital marketing space. Company headcount of ~150 employees at time of role.',
   },
   {
     slug: 'incopro',
@@ -76,6 +76,6 @@ export const experience = [
     companySummary: 'IP protection and brand monitoring technology company, acquired by Corsearch in 2022. Helped global brands protect trademarks and combat counterfeiting.',
     headcount: '~100 employees at time of role',
     teamSize: 'Add team size',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    description: 'IP protection and brand monitoring technology company, later acquired by Corsearch in 2022. Operating in the legal tech and brand protection space with ~100 employees. Served global brands in protecting trademarks and combating online counterfeiting.',
   },
 ];

@@ -431,34 +431,54 @@ img {
    Contact
    ============================================================ */
 
-.contact-groups {
+.contact-body {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.25rem;
 }
 
-.contact-group-label {
-  font-size: 0.65rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: #d4d4d4;
-  margin-bottom: 0.75rem;
-}
-
-.contact-links {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.contact-links a {
+.contact-intro {
   font-size: 0.875rem;
+  color: #737373;
+  line-height: 1.75;
+}
+
+.contact-cta {
+  display: block;
+  padding: 0.875rem 1.5rem;
+  border: 1px solid #171717;
+  font-size: 0.95rem;
   color: #171717;
+  text-align: center;
+  letter-spacing: 0.02em;
+  transition: background 0.2s, color 0.2s;
+}
+
+.contact-cta:hover {
+  background: #171717;
+  color: #ffffff;
+}
+
+.contact-secondary {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 0.25rem;
+}
+
+.contact-row {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.contact-secondary-link {
+  font-size: 0.8rem;
+  color: #a3a3a3;
   transition: color 0.2s;
 }
 
-.contact-links a:hover {
-  color: #a3a3a3;
+.contact-secondary-link:hover {
+  color: #171717;
 }
 
 /* ============================================================

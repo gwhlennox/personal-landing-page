@@ -1,6 +1,7 @@
 export const experience = [
   {
     slug: 'sideshift-ai',
+    logo: 'https://logo.clearbit.com/sideshift.ai',
     company: 'SideShift.ai',
     role: 'Developer Relations | Ecosystem & Strategic Partnerships',
     period: 'Apr 2025 – May 2026',
@@ -24,6 +25,7 @@ export const experience = [
   },
   {
     slug: 'accenture',
+    logo: 'https://logo.clearbit.com/accenture.com',
     company: 'Accenture',
     role: 'Chief of Staff & Lead Data Consultant',
     period: 'Jun 2021 – Nov 2023',
@@ -43,6 +45,7 @@ export const experience = [
   },
   {
     slug: 'ntt-data',
+    logo: 'https://logo.clearbit.com/nttdata.com',
     company: 'NTT Data',
     role: 'Solution Team Leader & Product Owner',
     period: 'Jun 2018 – Jun 2021',
@@ -63,6 +66,7 @@ export const experience = [
   },
   {
     slug: 'olapic',
+    logo: 'https://logo.clearbit.com/olapic.com',
     company: 'Olapic',
     role: 'Project Manager',
     period: 'Aug 2016 – Jun 2018',
@@ -78,6 +82,7 @@ export const experience = [
   },
   {
     slug: 'peerius',
+    logo: 'https://logo.clearbit.com/peerius.com',
     company: 'Peerius',
     role: 'Project Manager',
     period: 'Jan 2015 – Aug 2016',
@@ -93,6 +98,7 @@ export const experience = [
   },
   {
     slug: 'incopro',
+    logo: 'https://logo.clearbit.com/incopro.com',
     company: 'Incopro',
     role: 'Database Manager',
     period: 'Apr 2014 – Jan 2015',

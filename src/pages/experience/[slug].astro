@@ -50,7 +50,19 @@ const { item } = Astro.props;
         <header class="company-header">
           <div>
             <p class="hero-label">{item.role}</p>
-            <h1 class="company-name">{item.company}</h1>
+            <div class="company-name-row">
+              {item.logo && (
+                <img
+                  src={item.logo}
+                  alt={`${item.company} logo`}
+                  class="company-logo"
+                  onerror="this.style.display='none'"
+                  width="32"
+                  height="32"
+                />
+              )}
+              <h1 class="company-name">{item.company}</h1>
+            </div>
             <p class="company-period">{item.period}</p>
           </div>
           <a

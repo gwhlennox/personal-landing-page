@@ -85,7 +85,19 @@ import { experience } from '../data/experience.js';
           {experience.map((item) => (
             <article class="card">
               <div class="card-header">
-                <h3 class="card-company">{item.company}</h3>
+                <div class="card-company-row">
+                  {item.logo && (
+                    <img
+                      src={item.logo}
+                      alt={`${item.company} logo`}
+                      class="card-logo"
+                      onerror="this.style.display='none'"
+                      width="20"
+                      height="20"
+                    />
+                  )}
+                  <h3 class="card-company">{item.company}</h3>
+                </div>
                 <span class="card-period">{item.period}</span>
               </div>
               <p class="card-role">{item.role}</p>

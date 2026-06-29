@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import Footer from '../components/Footer.astro';
 
 const posts = await Astro.glob('./posts/*.md');
 const sortedPosts = posts.sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date));
@@ -21,8 +22,7 @@ const sortedPosts = posts.sort((a, b) => new Date(b.frontmatter.date) - new Date
   <body>
 
     <nav class="nav">
-      <div class="maintenance-banner">Under construction — check back soon</div>
-      <div class="nav-inner">
+<div class="nav-inner">
         <a href="/" class="nav-logo" aria-label="Back to home">
           <img src="/headshot.jpg" alt="George Lennox" class="nav-avatar" width="30" height="30" />
         </a>
@@ -69,12 +69,7 @@ const sortedPosts = posts.sort((a, b) => new Date(b.frontmatter.date) - new Date
       </div>
     </main>
 
-    <footer class="footer">
-      <div class="footer-inner">
-        <a href="/" class="footer-home">← George Lennox</a>
-        <span>© 2026</span>
-      </div>
-    </footer>
+    <Footer />
 
   </body>
 </html>

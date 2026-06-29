@@ -99,16 +99,6 @@ const { item } = Astro.props;
           </section>
         )}
 
-        {item.caseStudies && item.caseStudies.length > 0 && (
-          <section class="section">
-            <h2 class="section-label">Case Studies</h2>
-            <ul class="case-studies-list">
-              {item.caseStudies.map((cs) => (
-                <li class="case-study-item">{cs.name}</li>
-              ))}
-            </ul>
-          </section>
-        )}
 
       </div>
     </main>

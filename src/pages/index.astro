@@ -107,16 +107,6 @@ import { experience } from '../data/experience.js';
                   <li class="card-bullet">{bullet}</li>
                 ))}
               </ul>
-              {item.caseStudies && item.caseStudies.length > 0 && (
-                <div class="card-projects">
-                  <p class="card-projects-label">Case Studies</p>
-                  <ul class="card-projects-list">
-                    {item.caseStudies.map((cs) => (
-                      <li class="card-project-item">{cs.name}</li>
-                    ))}
-                  </ul>
-                </div>
-              )}
               <div class="card-footer">
                 <a href={`/experience/${item.slug}`} class="card-arrow" aria-label={`View ${item.company} in detail`}>
                   View more →

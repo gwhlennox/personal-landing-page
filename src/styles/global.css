@@ -119,8 +119,8 @@ img {
 }
 
 .hero-photo {
-  width: 200px;
-  height: 267px;
+  width: 260px;
+  height: 347px;
   object-fit: cover;
   object-position: top center;
   filter: grayscale(1);

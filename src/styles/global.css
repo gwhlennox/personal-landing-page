@@ -13,7 +13,10 @@ html {
 }
 
 body {
-  background: #ffffff;
+  background-color: #ffffff;
+  background-image: linear-gradient(180deg, #ede9e1 0%, #ffffff 100%);
+  background-size: 100% 620px;
+  background-repeat: no-repeat;
   color: #262626;
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   font-size: 1rem;

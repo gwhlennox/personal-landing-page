@@ -19,8 +19,24 @@ const { item } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{item.company} — George Lennox</title>
-    <meta name="description" content={`George Lennox at ${item.company} — ${item.role}`} />
+    <meta name="description" content={`George Lennox at ${item.company} — ${item.role}. ${item.companySummary}`} />
+    <link rel="canonical" href={`https://georgelennox.xyz/experience/${item.slug}`} />
     <link rel="icon" type="image/png" href="/favicon.png" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={`https://georgelennox.xyz/experience/${item.slug}`} />
+    <meta property="og:title" content={`${item.company} — George Lennox`} />
+    <meta property="og:description" content={`George Lennox at ${item.company} — ${item.role}. ${item.companySummary}`} />
+    <meta property="og:image" content="https://georgelennox.xyz/headshot.jpg" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@winwithgeorge" />
+    <meta name="twitter:title" content={`${item.company} — George Lennox`} />
+    <meta name="twitter:description" content={`George Lennox at ${item.company} — ${item.role}.`} />
+    <meta name="twitter:image" content="https://georgelennox.xyz/headshot.jpg" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />

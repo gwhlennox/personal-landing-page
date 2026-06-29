@@ -1,0 +1,67 @@
+---
+import '../styles/global.css';
+const { frontmatter } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{frontmatter.title} — George Lennox</title>
+    <meta name="description" content={frontmatter.description} />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  </head>
+
+  <body>
+
+    <nav class="nav">
+      <div class="maintenance-banner">Under construction — check back soon</div>
+      <div class="nav-inner">
+        <a href="/" class="nav-logo" aria-label="Back to home">
+          <img src="/headshot.jpg" alt="George Lennox" class="nav-avatar" width="30" height="30" />
+        </a>
+        <div class="nav-links">
+          <a href="/#experience">Experience</a>
+          <a href="/#articles">Articles</a>
+          <a href="/#media">Media</a>
+          <a href="/#about">About</a>
+          <a href="/#contact">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container">
+      <article class="post-page">
+
+        <a href="/#articles" class="back-link">← Back to articles</a>
+
+        <header class="post-header">
+          <p class="post-date">
+            {new Date(frontmatter.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
+          </p>
+          <h1 class="post-title">{frontmatter.title}</h1>
+          {frontmatter.description && (
+            <p class="post-description">{frontmatter.description}</p>
+          )}
+        </header>
+
+        <div class="post-body">
+          <slot />
+        </div>
+
+      </article>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <a href="/" class="footer-home">← George Lennox</a>
+        <span>© 2026</span>
+      </div>
+    </footer>
+
+  </body>
+</html>

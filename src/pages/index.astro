@@ -1,6 +1,9 @@
 ---
 import '../styles/global.css';
 import { experience } from '../data/experience.js';
+
+const posts = await Astro.glob('./posts/*.md');
+const sortedPosts = posts.sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date));
 ---
 
 <!DOCTYPE html>
@@ -143,25 +146,21 @@ import { experience } from '../data/experience.js';
 
       <!-- Articles -->
       <section id="articles" class="section">
-        <div class="sidebar-layout">
-          <div>
-            <h2 class="section-label">Articles</h2>
-          </div>
-          <div class="sidebar-body">
-            <p>
-              Writing on customer success, chief of staff, Web3, and operating
-              at the intersection of strategy and delivery.
-            </p>
-            <a
-              href="https://linktr.ee/georgelennox"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="link-arrow"
-            >
-              Read all articles ↗
-            </a>
-          </div>
-        </div>
+        <h2 class="section-label">Articles</h2>
+        {sortedPosts.length > 0 ? (
+          <ul class="posts-list">
+            {sortedPosts.map((post) => (
+              <li class="post-item">
+                <span class="post-item-date">
+                  {new Date(post.frontmatter.date).toLocaleDateString('en-GB', { month: 'short', year: 'numeric' })}
+                </span>
+                <a href={post.url} class="post-item-title">{post.frontmatter.title}</a>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p class="posts-empty">Articles coming soon.</p>
+        )}
       </section>
 
       <!-- Media -->

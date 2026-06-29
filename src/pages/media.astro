@@ -1,6 +1,11 @@
 ---
 import '../styles/global.css';
-const { frontmatter } = Astro.props;
+
+const videos = [
+  { id: 'hYJDdbg35SI' },
+  { id: 'lreyNaTfQuw' },
+  { id: 'OeqitXX0pfE' },
+];
 ---
 
 <!DOCTYPE html>
@@ -8,8 +13,8 @@ const { frontmatter } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{frontmatter.title} — George Lennox</title>
-    <meta name="description" content={frontmatter.description} />
+    <title>Media — George Lennox</title>
+    <meta name="description" content="Video interviews and media appearances by George Lennox." />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -35,25 +40,33 @@ const { frontmatter } = Astro.props;
     </nav>
 
     <main class="container">
-      <article class="post-page">
+      <div class="standalone-page">
 
-        <a href="/#articles" class="back-link">← Back to articles</a>
+        <a href="/" class="back-link">← Home</a>
 
-        <header class="post-header">
-          <p class="post-date">
-            {new Date(frontmatter.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
-          </p>
-          <h1 class="post-title">{frontmatter.title}</h1>
-          {frontmatter.description && (
-            <p class="post-description">{frontmatter.description}</p>
-          )}
+        <header class="standalone-header">
+          <p class="hero-label">Appearances</p>
+          <h1 class="standalone-title">Media</h1>
+          <p class="standalone-subtitle">Interviews and features across Web3, partnerships, and enterprise strategy.</p>
         </header>
 
-        <div class="post-body">
-          <slot />
+        <div class="videos-grid">
+          {videos.map((video) => (
+            <div class="video-item">
+              <div class="video-embed">
+                <iframe
+                  src={`https://www.youtube.com/embed/${video.id}`}
+                  title="Video appearance"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                  loading="lazy"
+                ></iframe>
+              </div>
+            </div>
+          ))}
         </div>
 
-      </article>
+      </div>
     </main>
 
     <footer class="footer">

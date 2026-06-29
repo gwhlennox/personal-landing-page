@@ -102,7 +102,11 @@ import { experience } from '../data/experience.js';
                 <span class="card-period">{item.period}</span>
               </div>
               <p class="card-role">{item.role}</p>
-              <p class="card-desc">{item.description}</p>
+              <ul class="card-bullets">
+                {item.bullets.map((bullet) => (
+                  <li class="card-bullet">{bullet}</li>
+                ))}
+              </ul>
               {item.caseStudies && item.caseStudies.length > 0 && (
                 <div class="card-projects">
                   <p class="card-projects-label">Case Studies</p>

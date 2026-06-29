@@ -263,6 +263,55 @@ img {
   line-height: 1.7;
 }
 
+.card-bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.card-bullet {
+  font-size: 0.8rem;
+  color: #a3a3a3;
+  line-height: 1.6;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.card-bullet::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  color: #d4d4d4;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.role-bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 40rem;
+}
+
+.role-bullet {
+  font-size: 0.9rem;
+  color: #737373;
+  line-height: 1.75;
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+.role-bullet::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  color: #d4d4d4;
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
 .card-projects {
   margin-top: 1.25rem;
   padding-top: 1.25rem;

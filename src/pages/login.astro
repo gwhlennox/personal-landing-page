@@ -10,7 +10,6 @@ import '../styles/global.css';
     <title>Access — George Lennox</title>
     <meta name="robots" content="noindex, nofollow" />
     <link rel="icon" type="image/png" href="/favicon.png" />
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -84,11 +83,6 @@ import '../styles/global.css';
         color: #a3a3a3;
       }
 
-      .captcha-wrapper {
-        display: flex;
-        justify-content: center;
-      }
-
       .login-error {
         font-size: 0.8125rem;
         color: #dc2626;
@@ -138,14 +132,6 @@ import '../styles/global.css';
             required
           />
 
-          <div class="captcha-wrapper">
-            <div
-              class="cf-turnstile"
-              data-sitekey="1x00000000000000000000AA"
-              data-theme="light"
-            ></div>
-          </div>
-
           <p id="login-error" class="login-error" hidden>
             Incorrect password. Please try again.
           </p>
@@ -172,15 +158,8 @@ import '../styles/global.css';
         e.preventDefault();
 
         const password = document.getElementById('password').value;
-        const captcha = document.querySelector('[name="cf-turnstile-response"]')?.value;
         const errorEl = document.getElementById('login-error');
         const btn = document.getElementById('login-btn');
-
-        if (!captcha) {
-          errorEl.textContent = 'Please complete the captcha first.';
-          errorEl.hidden = false;
-          return;
-        }
 
         btn.disabled = true;
         btn.textContent = 'Checking…';
@@ -191,7 +170,6 @@ import '../styles/global.css';
           sessionStorage.setItem('gl_auth', '1');
           window.location.replace('/');
         } else {
-          errorEl.textContent = 'Incorrect password. Please try again.';
           errorEl.hidden = false;
           btn.disabled = false;
           btn.textContent = 'Continue →';

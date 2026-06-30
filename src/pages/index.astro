@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import { experience } from '../data/experience.js';
 import Footer from '../components/Footer.astro';
+import AuthGate from '../components/AuthGate.astro';
 ---
 
 <!DOCTYPE html>
@@ -58,7 +59,7 @@ import Footer from '../components/Footer.astro';
   </head>
 
   <body>
-
+    <AuthGate />
     <nav class="nav">
 <div class="nav-inner">
         <a href="#" class="nav-logo" aria-label="Home">

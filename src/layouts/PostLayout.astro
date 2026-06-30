@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import Footer from '../components/Footer.astro';
+import AuthGate from '../components/AuthGate.astro';
 const { frontmatter } = Astro.props;
 ---
 
@@ -34,7 +35,7 @@ const { frontmatter } = Astro.props;
   </head>
 
   <body>
-
+    <AuthGate />
     <nav class="nav">
 <div class="nav-inner">
         <a href="/" class="nav-logo" aria-label="Back to home">

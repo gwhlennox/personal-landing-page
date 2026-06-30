@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import Footer from '../components/Footer.astro';
+import AuthGate from '../components/AuthGate.astro';
 
 const posts = await Astro.glob('./posts/*.md');
 const sortedPosts = posts.sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date));
@@ -28,7 +29,7 @@ const sortedPosts = posts.sort((a, b) => new Date(b.frontmatter.date) - new Date
   </head>
 
   <body>
-
+    <AuthGate />
     <nav class="nav">
 <div class="nav-inner">
         <a href="/" class="nav-logo" aria-label="Back to home">

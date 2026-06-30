@@ -1,0 +1,204 @@
+---
+import '../styles/global.css';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Access — George Lennox</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+    <style>
+      .login-page {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+      }
+
+      .login-card {
+        width: 100%;
+        max-width: 360px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .login-avatar {
+        width: 72px;
+        height: 72px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: top;
+        margin-bottom: 1.25rem;
+      }
+
+      .login-name {
+        font-size: 1.25rem;
+        font-weight: 500;
+        color: #171717;
+        margin: 0 0 0.375rem;
+        letter-spacing: -0.02em;
+      }
+
+      .login-subtitle {
+        font-size: 0.875rem;
+        color: #767676;
+        margin: 0 0 2rem;
+      }
+
+      .login-form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.875rem;
+      }
+
+      .login-input {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        font-size: 0.9375rem;
+        font-family: 'Inter', system-ui, sans-serif;
+        color: #171717;
+        background: #ffffff;
+        border: 1px solid #e5e5e5;
+        border-radius: 8px;
+        outline: none;
+        box-sizing: border-box;
+        transition: border-color 0.15s;
+      }
+
+      .login-input:focus {
+        border-color: #a3a3a3;
+      }
+
+      .login-input::placeholder {
+        color: #a3a3a3;
+      }
+
+      .captcha-wrapper {
+        display: flex;
+        justify-content: center;
+      }
+
+      .login-error {
+        font-size: 0.8125rem;
+        color: #dc2626;
+        margin: 0;
+        text-align: left;
+      }
+
+      .login-btn {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        font-size: 0.9375rem;
+        font-family: 'Inter', system-ui, sans-serif;
+        font-weight: 500;
+        color: #ffffff;
+        background: #171717;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.15s;
+      }
+
+      .login-btn:hover {
+        background: #262626;
+      }
+
+      .login-btn:disabled {
+        background: #a3a3a3;
+        cursor: not-allowed;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="login-page">
+      <div class="login-card">
+        <img src="/headshot.jpg" alt="George Lennox" class="login-avatar" />
+        <h1 class="login-name">George Lennox</h1>
+        <p class="login-subtitle">This site is private. Enter the password to continue.</p>
+
+        <form class="login-form" id="login-form" novalidate>
+          <input
+            type="password"
+            id="password"
+            class="login-input"
+            placeholder="Password"
+            autocomplete="current-password"
+            required
+          />
+
+          <div class="captcha-wrapper">
+            <div
+              class="cf-turnstile"
+              data-sitekey="1x00000000000000000000AA"
+              data-theme="light"
+            ></div>
+          </div>
+
+          <p id="login-error" class="login-error" hidden>
+            Incorrect password. Please try again.
+          </p>
+
+          <button type="submit" class="login-btn" id="login-btn">
+            Continue →
+          </button>
+        </form>
+      </div>
+    </main>
+
+    <script>
+      const CORRECT_HASH = '9183ca43441f73c2cba416c1cf27825108908fc9f55eee97e84fdf215c157f16';
+
+      async function sha256(text) {
+        const data = new TextEncoder().encode(text);
+        const hash = await crypto.subtle.digest('SHA-256', data);
+        return Array.from(new Uint8Array(hash))
+          .map(b => b.toString(16).padStart(2, '0'))
+          .join('');
+      }
+
+      document.getElementById('login-form').addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const password = document.getElementById('password').value;
+        const captcha = document.querySelector('[name="cf-turnstile-response"]')?.value;
+        const errorEl = document.getElementById('login-error');
+        const btn = document.getElementById('login-btn');
+
+        if (!captcha) {
+          errorEl.textContent = 'Please complete the captcha first.';
+          errorEl.hidden = false;
+          return;
+        }
+
+        btn.disabled = true;
+        btn.textContent = 'Checking…';
+
+        const hash = await sha256(password);
+
+        if (hash === CORRECT_HASH) {
+          sessionStorage.setItem('gl_auth', '1');
+          window.location.replace('/');
+        } else {
+          errorEl.textContent = 'Incorrect password. Please try again.';
+          errorEl.hidden = false;
+          btn.disabled = false;
+          btn.textContent = 'Continue →';
+          document.getElementById('password').value = '';
+          document.getElementById('password').focus();
+        }
+      });
+    </script>
+  </body>
+</html>

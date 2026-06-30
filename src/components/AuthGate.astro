@@ -1,0 +1,9 @@
+---
+---
+<script>
+  (function () {
+    if (!sessionStorage.getItem('gl_auth')) {
+      window.location.replace('/login');
+    }
+  })();
+</script>

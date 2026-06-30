@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import Footer from '../components/Footer.astro';
+import AuthGate from '../components/AuthGate.astro';
 
 const videos = [
   { id: 'hYJDdbg35SI' },
@@ -31,7 +32,7 @@ const videos = [
   </head>
 
   <body>
-
+    <AuthGate />
     <nav class="nav">
 <div class="nav-inner">
         <a href="/" class="nav-logo" aria-label="Back to home">
